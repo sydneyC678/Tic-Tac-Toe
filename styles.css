@@ -133,8 +133,9 @@ body {
 }
 .restart-btn {
   position: absolute;
-  bottom: 10px; /* Adjust this value as needed */
+  /* Adjust this value as needed */
   left: 50%;
+  margin-top: 20px;
   display: none;
   top: 10px;
   transform: translateX(-50%);
@@ -145,7 +146,7 @@ body {
   width: 500px;
   display: none;
   height: 500px;
-  margin-top: 20px;
+
   margin-bottom: 40px;
   border-collapse: collapse;
   box-shadow: 0 0 0 2px #ff0000, 0 0 0 4px #ff7300, 0 0 0 6px #fffb00,
