@@ -121,6 +121,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: var(--text-size);
+  text-transform: uppercase;
 }
 .gameboard {
   background-color: var(--gameboard-background-color);
@@ -138,8 +139,20 @@ body {
   margin-top: 20px;
   display: none;
   top: 10px;
+  text-transform: uppercase;
+  font-size: var(--text-size);
+
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
   transform: translateX(-50%);
   font-size: var(--text-size);
+}
+.status {
+  font-size: 50px;
+  color: #002bff;
+  text-align: center; /* Add this line */
+  text-transform: uppercase;
 }
 
 .gameboard-table {
@@ -168,10 +181,4 @@ body {
 .gameboard-row {
   width: 50px;
   height: 50px;
-}
-.status {
-  font-size: 50px;
-  color: #002bff;
-  margin-left: 12%;
-  text-transform: uppercase;
 }
