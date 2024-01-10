@@ -1,0 +1,176 @@
+/* Color Scheme*/
+/* Theme: Disney Princess
+
+Incorporate Later:
+
+- User can decide which princess they want to be -> serves as X or O
+- Make sure user1 and user2 did not choose the same princess
+- Princess image is used as the marker
+
+
+*/
+:root {
+  --background-color: #111;
+
+  --gameboar-border-color: rgba(65, 61, 61, 0.771);
+  --text-size: 20px;
+  --text-size-2: 50px;
+  --hover-1: rgb(151, 144, 144);
+  --hover-2: rgb(168, 162, 162);
+  --title-color: rgb(41, 41, 124);
+  --second-title-color: rgb(88, 88, 157);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-color);
+}
+.game {
+  width: 500px;
+  height: 500px;
+}
+.game-homepage h1 {
+  color: var(--title-color);
+}
+.game-homepage h3 {
+  color: var(--second-title-color);
+}
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--text-size);
+}
+.gameboard {
+  background-color: var(--gameboard-background-color);
+  height: 500px;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.restart-btn {
+  position: absolute;
+  bottom: 10px; /* Adjust this value as needed */
+  left: 50%;
+  display: none;
+  top: 10px;
+  transform: translateX(-50%);
+  font-size: var(--text-size);
+}
+
+.gameboard-table {
+  width: 500px;
+  display: none;
+  height: 500px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  box-shadow: 0 0 0 2px #ff0000, 0 0 0 4px #ff7300, 0 0 0 6px #fffb00,
+    0 0 0 8px #48ff00, 0 0 0 10px #00ffd5, 0 0 0 12px #002bff,
+    0 0 0 14px #7a00ff, 0 0 0 16px #ff00c8, 0 0 0 18px #ff0000;
+}
+.gameboard-column {
+  border: 2px solid #7a00ff;
+  font-size: var(--text-size-2);
+  text-align: center;
+  padding: 50px;
+  width: 500px;
+  height: 165px;
+  color: white;
+}
+.gameboard-column:hover {
+  background-color: var(--hover);
+}
+.gameboard-row {
+  width: 50px;
+  height: 50px;
+}
+.status {
+  font-size: 50px;
+  color: #002bff;
+  margin-left: 12%;
+  text-transform: uppercase;
+}

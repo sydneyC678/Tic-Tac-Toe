@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="homepage-button">
+        <button
+          class="start-game-btn glow-on-hover center-button"
+          id="start-game-btn"
+        >
+          Start Game
+        </button>
+      </div>
+
+      <div class="gameboard-wrapper">
+        <div class="gameboard" id="gameboard">
+          <table class="gameboard-table" id="gameboard-table">
+            <tr class="gameboard-row">
+              <td class="gameboard-column" id="0"></td>
+              <td class="gameboard-column" id="1"></td>
+              <td class="gameboard-column" id="2"></td>
+            </tr>
+            <tr class="gameboard-row">
+              <td class="gameboard-column" id="3"></td>
+              <td class="gameboard-column" id="4"></td>
+              <td class="gameboard-column" id="5"></td>
+            </tr>
+            <tr class="gameboard-row">
+              <td class="gameboard-column" id="6"></td>
+              <td class="gameboard-column" id="7"></td>
+              <td class="gameboard-column" id="8"></td>
+            </tr>
+          </table>
+          <div class="status" id="status"></div>
+        </div>
+        <button class="restart-btn glow-on-hover" id="restart-btn">
+          Restart
+        </button>
+      </div>
+    </div>
+    <script src="main_console.js"></script>
+  </body>
+</html>
